@@ -1,0 +1,71 @@
+
+.left-panel {
+    width: 500px;
+    height: 100%;
+}
+
+.bottom-left-panel, .top-left-panel {
+    width: 100%;
+    overflow: auto;
+}
+
+.top-left-panel {
+    height: 60%;
+    padding: 5px;
+    padding-top: 0px;
+    border-bottom: 3px solid #24292f;
+    background-color: ;
+}
+
+.bottom-left-panel {
+    height: 40%;
+    overflow: scroll;
+    overflow-x: scroll;
+    padding: 5px;
+}
+
+.sample-row {
+    padding: 5px;
+}
+
+.alternate-color {
+    background-color: #eee;
+}
+
+.sample-ul {
+    margin: 0px;
+}
+
+.sample-ul > * {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.sample-index, .heading-index {
+    width: 60px;
+}
+
+.sample-first-column, .heading-first-column {
+    width: 210px;
+}
+
+.sample-label, .heading-label {
+    width: 100px;
+}
+
+.inspect-button {
+    padding: 0px 10px;
+}
+
+.label-input {
+    width: 100px;
+}
+
+.list-key {
+    font-weight: bold;
+}
+
+.list-value {
+    color: #333;
+}
