@@ -76,10 +76,15 @@
 }
 
 .download-button {
-    background-color: rgb(62, 123, 195);
+    background-color: hsl(212, 53%, 50%);
     border: none;
     color: white;
     font-weight: bold;
+}
+
+.download-button:hover {
+    background-color: hsl(212, 53%, 40%);
+    cursor: pointer;
 }
 
 .input-file {
@@ -90,6 +95,11 @@
     padding: 4px;
     border-radius: 5px;
     color: white;
+}
+
+.input-file:hover {
+    background-color: hsl(0, 59%, 44%);
+    cursor: pointer;
 }
 
 .object-embed {
