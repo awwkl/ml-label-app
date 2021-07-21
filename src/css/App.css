@@ -39,6 +39,9 @@
     flex: 1;
     height: 99.5%;
     /* background-color: lightblue; */
+    overflow: scroll;
+
+    display: flex;
 }
 
 .iframe {
@@ -87,4 +90,24 @@
     padding: 4px;
     border-radius: 5px;
     color: white;
+}
+
+.object-embed {
+    width: 500px;
+    height: 500px;
+}
+
+code, .line-number {
+    white-space: pre;
+    font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
+    font-size: 12px;
+}
+
+.highlight-line {
+    background-color: #fff8c5;
+}
+
+.line-numbers {
+    margin-right: 10px;
+    text-align: right;
 }

@@ -1,7 +1,5 @@
 import React from "react";
 import * as d3 from "d3";
-// import CsvDownloader from 'react-csv-downloader';
-// import { CSVLink, CSVDownload } from 'react-csv';
 import useCsvDownloader from 'use-csv-downloader';
 
 function Downloader(data, outFilename) {

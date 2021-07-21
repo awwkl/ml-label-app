@@ -14,7 +14,6 @@
     padding: 5px;
     padding-top: 0px;
     border-bottom: 3px solid #24292f;
-    background-color: ;
 }
 
 .bottom-left-panel {
@@ -30,6 +29,10 @@
 
 .alternate-color {
     background-color: #eee;
+}
+
+.inspected-sample {
+    background-color: #fff8c5;
 }
 
 .sample-ul {
@@ -58,7 +61,7 @@
     padding: 0px 10px;
 }
 
-.label-input {
+.label-select {
     width: 100px;
 }
 

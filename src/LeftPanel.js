@@ -11,7 +11,7 @@ export function LeftPanel(props) {
 
 export function BottomLeftPanel(props) {
     const data = props.data;
-    const inspected_index = props.inspected_index;
+    const inspected_index = props.inspected_index === -1 ? 0 : props.inspected_index;
     const sample = data[inspected_index];
     console.log(sample);
 
@@ -34,11 +34,13 @@ export function BottomLeftPanel(props) {
 
 export function TopLeftPanel(props) {
     const data = props.data;
+    const inspected_index = props.inspected_index === -1 ? 0 : props.inspected_index;
         
     const data_arr = data.map((sample, index) =>
         <Sample 
             key={index}
             index={index}
+            inspected_index={inspected_index}
             sample={sample}
             onLabelChange={props.onLabelChange} 
             onInspectedIndexChange={props.onInspectedIndexChange}
@@ -61,11 +63,11 @@ class Sample extends React.Component {
     }
     
     handleLabelChange(e) {
+        console.log(e.target.id, 'label', e.target.value);
         this.props.onLabelChange(e.target.id, 'label', e.target.value);
     }
 
     handleInspectedId(index) {
-        // console.log("from within sample! handle url change!");
         this.props.onInspectedIndexChange(index);
     }
     
@@ -75,19 +77,27 @@ class Sample extends React.Component {
         const label = this.props.sample.label;
         const commit_url = this.props.sample["commit url"];
 
-        const className = "sample-row" + ((index % 2 != 0) ? " alternate-color" : "");
+        const divClassName = "sample-row" + 
+                                ((index % 2 != 0) ? " alternate-color" : "") +
+                                ((this.props.inspected_index === index ? " inspected-sample" : ""));
         
+        const selectOptions = ["open", "close", "unknown", ""];
+        const selectElement = (
+            <select id={index} className="label-select" value={label} onChange={this.handleLabelChange}>
+                {selectOptions.map((option) => <option value={option}>{option}</option>)}
+                {(selectOptions.includes(label) || label === "")
+                    ? null
+                    : <option value={label}>{label}</option>
+                }
+            </select>
+        )
+
         return (
-            <div className={className}>
+            <div className={divClassName}>
                 <ul className="sample-ul">
                     <li className="sample-index">#{index}</li>
                     <li className="sample-first-column">{first_column}</li>
-                    <li className="sample-label">
-                        <input
-                            className="label-input" type="text" 
-                            id={index} value={label}
-                            onChange={this.handleLabelChange} />
-                    </li>
+                    <li className="sample-label">{selectElement}</li>
                     <li className="sample-inspect-button">
                         <button 
                             className="inspect-button"

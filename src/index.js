@@ -6,18 +6,18 @@ import { LeftPanel } from './LeftPanel';
 import { RightPanel } from './RightPanel';
 import { TopNav } from './TopNav';
 
-const global_data = [
-    {warning_id: 1977, bug_pattern: 'MALICIOUS_CODE', "commit url": "https://github.com/apache/phoenix/tree/3f48938d5d5a67d59129eb90295894cc76e58508/./phoenix-core/src/it/java/org/apache/phoenix/end2end/SortMergeJoinIT.java#L768", label: 'open'},
-    {warning_id: 405, bug_pattern: 'EXPERIMENTAL', "commit url": "https://github.com/apache/phoenix/tree/4de4251310cfcef12178713d6d6e93b0882a4f4d/./phoenix-core/src/it/java/org/apache/phoenix/end2end/index/DropIndexDuringUpsertIT.java#L113", label: 'close'},
-    {warning_id: 2362, bug_pattern: 'MALICIOUS_CODE', "commit url": "https://github.com/apache/lucene-solr/tree/93e19a3148ef8d428354e2e8a7af5dd3ad03ea9f/./lucene/queryparser/src/java/org/apache/lucene/queryparser/flexible/core/messages/QueryParserMessages.java#L-2", label: ''},
+const initial_sample_data = [
+    {bug_pattern: 'SAMPLE_01', start_line: 92, "commit url": " https://github.com/apache/phoenix/tree/27a6db9ae49df5ca14e2b9cb07ddf6bb608db976/./phoenix-core/src/it/java/org/apache/phoenix/end2end/QueryDatabaseMetaDataIT.java#L92", label: 'open'},
+    {bug_pattern: 'SAMPLE_02', start_line: 1825, "commit url": "https://github.com/apache/phoenix/tree/27a6db9ae49df5ca14e2b9cb07ddf6bb608db976/./phoenix-core/src/it/java/org/apache/phoenix/end2end/VariableLengthPKIT.java#L1825", label: 'close'},
+    {bug_pattern: 'SAMPLE_03', start_line: -2, "commit url": "https://github.com/apache/lucene-solr/tree/23aa3e09064b7147e3eb311283fe9e3410f9e39d/./lucene/queryparser/src/java/org/apache/lucene/queryparser/flexible/core/messages/QueryParserMessages.java#L-2", label: ''},
 ];
 
 class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            data: global_data,
-            inspected_index: 0,
+            data: initial_sample_data,
+            inspected_index: -1,
         };
         this.handleValueChange = this.handleValueChange.bind(this);
         this.handleInspectedIndexChange = this.handleInspectedIndexChange.bind(this);
@@ -37,11 +37,13 @@ class App extends React.Component {
     handleDataChange(data) {
         console.log("handle data change in App!");
         console.log(data);
-        this.setState({data: data});
+        this.setState({
+            data: data, 
+            inspected_index: -1
+        });
     }
     
     render() {
-
         return (
             <div className="page-container">
                 <TopNav
