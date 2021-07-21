@@ -18,7 +18,7 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    background-color: #24292f;
+    background-color: hsl(213, 13%, 16%);
     color: white;
     font-weight: bold;
 ;
@@ -84,7 +84,7 @@
 
 .input-file {
     width: 200px;
-    background-color: #cf4545;
+    background-color: hsl(0, 59%, 54%);
     margin-right: 100px;
     display: flex;
     padding: 4px;
@@ -104,7 +104,7 @@ code, .line-number {
 }
 
 .highlight-line {
-    background-color: #fff8c5;
+    background-color: hsl(53, 100%, 89%);
 }
 
 .line-numbers {

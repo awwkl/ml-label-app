@@ -13,7 +13,7 @@
     height: 60%;
     padding: 5px;
     padding-top: 0px;
-    border-bottom: 3px solid #24292f;
+    border-bottom: 3px solid hsl(213, 13%, 16%);
 }
 
 .bottom-left-panel {
@@ -28,11 +28,11 @@
 }
 
 .alternate-color {
-    background-color: #eee;
+    background-color: hsl(0, 0%, 93%);
 }
 
 .inspected-sample {
-    background-color: #fff8c5;
+    background-color: hsl(53, 100%, 89%);
 }
 
 .sample-ul {
@@ -70,5 +70,5 @@
 }
 
 .list-value {
-    color: #333;
+    color: hsl(0, 0%, 20%);
 }
