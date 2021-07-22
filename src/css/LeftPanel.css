@@ -10,14 +10,14 @@
 }
 
 .top-left-panel {
-    height: 60%;
+    height: 50%;
     padding: 5px;
     padding-top: 0px;
     border-bottom: 3px solid hsl(213, 13%, 16%);
 }
 
 .bottom-left-panel {
-    height: 40%;
+    height: 50%;
     overflow: scroll;
     overflow-x: scroll;
     padding: 5px;
