@@ -13,7 +13,8 @@ function FeatureValueItem(props) {
     const feature = props.feature;
     let value = String(props.value);
     if (value.startsWith("http") || value.startsWith("www.")) {
-        value = <a className="commit-link" href={value}>{value}</a>;
+        value = <a target="_blank" rel="noopener noreferrer" 
+        className="commit-link" href={value}>{value}</a>;
     }
     
     return (
