@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/ml-label-app/static/css/main.80a88087.chunk.css",
+    "main.css": "/ml-label-app/static/css/main.2b2b67ef.chunk.css",
     "main.js": "/ml-label-app/static/js/main.ed6980a7.chunk.js",
     "main.js.map": "/ml-label-app/static/js/main.ed6980a7.chunk.js.map",
     "runtime-main.js": "/ml-label-app/static/js/runtime-main.e60a1e17.js",
@@ -8,13 +8,13 @@
     "static/js/2.413cc984.chunk.js": "/ml-label-app/static/js/2.413cc984.chunk.js",
     "static/js/2.413cc984.chunk.js.map": "/ml-label-app/static/js/2.413cc984.chunk.js.map",
     "index.html": "/ml-label-app/index.html",
-    "static/css/main.80a88087.chunk.css.map": "/ml-label-app/static/css/main.80a88087.chunk.css.map",
+    "static/css/main.2b2b67ef.chunk.css.map": "/ml-label-app/static/css/main.2b2b67ef.chunk.css.map",
     "static/js/2.413cc984.chunk.js.LICENSE.txt": "/ml-label-app/static/js/2.413cc984.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.e60a1e17.js",
     "static/js/2.413cc984.chunk.js",
-    "static/css/main.80a88087.chunk.css",
+    "static/css/main.2b2b67ef.chunk.css",
     "static/js/main.ed6980a7.chunk.js"
   ]
 }
