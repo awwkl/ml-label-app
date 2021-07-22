@@ -65,10 +65,10 @@
     width: 100px;
 }
 
-.list-key {
+.list-feature {
     font-weight: bold;
 }
 
-.list-value {
+.list-value, .commit-link {
     color: hsl(0, 0%, 20%);
 }

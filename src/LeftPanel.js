@@ -9,18 +9,30 @@ export function LeftPanel(props) {
     );
 }
 
+function FeatureValueItem(props) {
+    const feature = props.feature;
+    let value = String(props.value);
+    if (value.startsWith("http") || value.startsWith("www.")) {
+        value = <a className="commit-link" href={value}>{value}</a>;
+    }
+    
+    return (
+        <li>
+            <span className="list-feature">{props.feature}</span>: {" "}
+            <span className="list-value">{value}</span>
+        </li>
+    );
+}
+
 export function BottomLeftPanel(props) {
     const data = props.data;
     const inspected_index = props.inspected_index === -1 ? 0 : props.inspected_index;
     const sample = data[inspected_index];
     console.log(sample);
 
-    const keys = Object.keys(sample);
-    const listKeyValuePairs = keys.map(key =>
-        <li>
-            <span className="list-key">{key}</span>: {" "}
-            <span className="list-value">{sample[key]}</span>
-        </li>
+    const entries = Object.entries(sample);
+    const listKeyValuePairs = entries.map(([feature, value]) =>
+        <FeatureValueItem feature={feature} value={value} />
     );
     
     return (
